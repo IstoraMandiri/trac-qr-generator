@@ -1,0 +1,27 @@
+<head>
+  <title>trac-qr-generator</title>
+</head>
+
+<body>
+  {{> qrs}}
+</body>
+
+<template name="qrs">
+  <div class="no-print">
+    URL Prefix: <br><input type="text"><br>
+    Product IDs (one per line): <br><textarea name="" cols="30" rows="10"></textarea><br>
+    <button class='generate'>Generate</button> <button class='print'>Print</button>
+  </div>
+  {{#each qrCodes}}
+    {{> qrCode .}}
+  {{/each}}
+</template>
+
+<template name="qrCode">
+  <div class="qr-item">
+    <div class="qr-title">
+      {{.}}
+    </div>
+    <div class="qr-code"></div>
+  </div>
+</template>

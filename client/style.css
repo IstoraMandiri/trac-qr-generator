@@ -1,0 +1,28 @@
+@media print{
+  .no-print{
+    display:none;
+  }
+}
+
+body{
+  font-family:Arial;
+}
+
+.qr-item{
+  float:left;
+  width:25%;
+  padding:10px;
+  margin-top:-5px;
+  box-sizing:border-box;
+  font-size:10px;
+}
+.qr-code canvas{
+  width:100%;
+}
+.qr-title{
+  text-align:right;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  direction:rtl;
+}
